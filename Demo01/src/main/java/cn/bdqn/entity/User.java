@@ -3,14 +3,12 @@ package cn.bdqn.entity;
 public class User {
     private int id;
     private String username;
-    private String passwrod;
+    private String password;
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", passwrod='" + passwrod + '\'' +
+                "username='" + username + '\'' +
                 '}';
     }
 
@@ -30,11 +28,11 @@ public class User {
         this.username = username;
     }
 
-    public String getPasswrod() {
-        return passwrod;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasswrod(String passwrod) {
-        this.passwrod = passwrod;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

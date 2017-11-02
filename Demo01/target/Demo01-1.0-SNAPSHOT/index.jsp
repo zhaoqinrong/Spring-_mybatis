@@ -12,6 +12,7 @@
 </head>
 <body>
 <a href="user/getAll">获取全部用户</a>
+
 <form action="user/getuserIf" method="post">
     <input type="text" name="username">
     <input type="submit">

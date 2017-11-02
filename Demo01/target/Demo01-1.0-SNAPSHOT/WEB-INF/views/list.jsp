@@ -14,7 +14,7 @@
     <title> 18211071863</title>
 </head>
 <body>
-${allUser}
+
 <table>
     <tr>
         <td>id</td>
@@ -26,7 +26,7 @@ ${allUser}
         <tr>
             <td>${user.id}</td>
             <td>${user.username}</td>
-            <td>${user.passwrod}</td>
+            <td>${user.password}</td>
         </tr>
 
     </c:forEach>

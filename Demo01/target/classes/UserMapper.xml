@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.bdqn.dao.UserDao">
 <select id="getAll" resultType="cn.bdqn.entity.User">
-  select id id,username username, password password,CURRENT_TIMESTAMP tmie from user
+    select *  from user
 </select>
     <!--  List<User> getUserIf(String name);-->
     <select id="getUserIf" resultType="cn.bdqn.entity.User">
