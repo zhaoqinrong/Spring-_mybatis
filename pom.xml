@@ -26,6 +26,11 @@
   <name>Spring-mybatis</name>
     <modules>
         <module>Demo01</module>
+        <module>Demo02</module>
+        <module>Demo3</module>
+        <module>demo4</module>
+        <module>demo4</module>
+        <module>demo4</module>
     </modules>
     <groupId>cn.bdqn.Spring-mybatis</groupId>
   <artifactId>Spring-mybatis</artifactId>

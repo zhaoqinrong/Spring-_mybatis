@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bdqn.dao.UserDao">
+    <select id="getAll" resultType="cn.bdqn.entity.User">
+  select id id,username username, password password,CURRENT_TIMESTAMP tmie from user
+</select>
+    <!--  List<User> getUserIf(String name);-->
+    <select id="getUserIf" resultType="cn.bdqn.entity.User">
+        select * from user WHERE  username LIKE concat('%',#{username},'%')
+    </select>
+    <parameterMap id="nameIf" type="cn.bdqn.entity.User">
+        <parameter property="id" javaType="int"/>
+        <parameter property="username" javaType="String"/>
+        <parameter property="password" javaType="String"/>
+    </parameterMap>
+    <select id="getUserCustIf" resultType="cn.bdqn.entity.User" parameterMap="nameIf">
+        select *
+        from USER
+        <where>
+          <if test="id!=null">
+              OR id=#{id}
+          </if>
+            <if test="username!=null and username!=''">
+                OR  username like concat ('%',#{username},'%')
+            </if>
+            <if test="password!=null and password!=''">
+                OR password like concat('%',#{password},'%')
+            </if>
+        </where>
+    </select>
+</mapper>
